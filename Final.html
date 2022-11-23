@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Visor de Producto</title>
+    <style>
+      body {
+        margin: 0;
+      }
+    </style>
+  </head>
+
+  <body>
+    <script src="js/three.js"></script>
+    <script src="js/OrbitControls.js"></script>
+    <script src="js/OBJLoader.js"></script>
+    <script>
+      const scene = new THREE.Scene();
+      const camera = new THREE.PerspectiveCamera(
+        75,
+        window.innerWidth / window.innerHeight,
+        0.1,
+        1000
+      );
+
+      const renderer = new THREE.WebGLRenderer();
+      renderer.setSize(window.innerWidth, window.innerHeight);
+      document.body.appendChild(renderer.domElement);
+      renderer.shadowMap.enabled = true;
+      renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+
+      //Iluminacion
+      const spotLight = new THREE.SpotLight(0xffffff, 80, 200);
+      scene.add(spotLight);
+      spotLight.position.set(0, 100, 100);
+      spotLight.castShadow = true;
+      scene.add(spotLight);
+      const spotLightHelper = new THREE.SpotLightHelper(spotLight);
+      scene.add(spotLightHelper);
+
+      //Suelo de Tatami
+      const texture = new THREE.TextureLoader().load("textures/tatami.jpg");
+      texture.wrapS = THREE.RepeatWrapping;
+      texture.wrapT = THREE.RepeatWrapping;
+      texture.repeat.set(2, 2);
+
+      const material2 = new THREE.MeshBasicMaterial({
+        map: texture,
+        side: THREE.DoubleSide,
+      });
+      const planegeometry = new THREE.PlaneGeometry(50, 50);
+      const plane = new THREE.Mesh(planegeometry, material2);
+      plane.receiveShadow = true;
+      plane.castShadow = true;
+      scene.add(plane);
+      plane.rotation.x = Math.PI / 2;
+      plane.position.y = -1;
+      plane.position.z = -0.5;
+
+      //Carga de modelos y configuracion
+
+      //Stand de modelaje
+      const Stand = new THREE.OBJLoader();
+      Stand.load("models/standSmall_LOD0.obj", function (object) {
+        console.log(object.children[0]);
+        const estante = object.children[0];
+        estante.material = new THREE.MeshPhysicalMaterial({
+          color: "blue",
+        });
+
+        estante.scale.x = 6;
+        estante.scale.y = 6;
+        estante.scale.z = 6;
+        estante.position.y = -1;
+
+        scene.add(estante);
+      });
+
+      //Espada
+      const loader = new THREE.OBJLoader();
+      loader.load("models/Katana_export.obj", function (object) {
+        console.log(object.children[0]);
+        object.children[0].material = new THREE.MeshPhysicalMaterial({
+          color: "red",
+        });
+
+        object.children[0].scale.x = 2;
+        object.children[0].scale.y = 2;
+        object.children[0].scale.z = 2;
+        object.children[0].rotation.z = Math.PI / 2;
+
+        scene.add(object.children[0]);
+      });
+
+      //Vaina
+      const Vaina = new THREE.OBJLoader();
+      loader.load("models/Katana_export.obj", function (object) {
+        console.log(object.children[1]);
+        const funda = object.children[1];
+        funda.material = new THREE.MeshPhysicalMaterial({
+          color: "red",
+        });
+
+        funda.scale.x = 2.2;
+        funda.scale.y = 2.2;
+        funda.scale.z = 2.2;
+        funda.rotation.z = Math.PI / 2;
+	
+		funda.position.y = -0.4;
+		funda.position.x = -0.2;
+
+        scene.add(funda);
+      });
+
+      //general configs
+
+      camera.position.z = 5;
+      const control = new THREE.OrbitControls(camera, renderer.domElement);
+      control.update();
+
+      function animate() {
+        requestAnimationFrame(animate);
+
+        control.update();
+
+        renderer.render(scene, camera);
+      }
+
+      animate();
+    </script>
+  </body>
+</html>
