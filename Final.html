@@ -2,41 +2,264 @@
 <html>
 
 <head>
-  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Visor de Producto</title>
   <style>
     body {
       margin: 0;
     }
   </style>
+  <link rel="stylesheet" href="index.css" />
 </head>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
 <body>
-  <div class="sable">
-    <div>Sable</div>
-    <a class="prev" onclick="plusBlade(-1)">&#10094;</a>
-    <a class="next" onclick="plusBlade(1)">&#10095;</a>
+
+  <div class="sidebar">
+    <div class="main">
+      <div class="three">
+        <h1>Hoja de la Katana</h1>
+      </div>
+      <div class="sable">
+        <div class="flex-box">
+          <!-- <a class="previous round" onclick="plusBlade(-1)">&#8249;</a>
+          <span id="IDHoja">Hoja de Metal</span>
+               <a class="next round" onclick="plusBlade(1)">&#8250;</a> -->
+               <div class="Texturas">
+                <div class="hola">Estilo</div>
+          <div id="content">
+            <div id="top">
+              <div id="left">
+                <div class="container"> <a class="previous round" onclick="plusBlade(-1)">&#8249;</a> </div>
+              </div>
+              <div id="Center">
+                <div class="container"> <span id="IDHoja">Hoja Samurai</span> </div>
+              </div>
+              <div id="right">
+                <div class="container"> <a class="next round" onclick="plusBlade(1)">&#8250;</a> </div>
+              </div>
+            </div>
+            <div id="bottom">
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+      </div>
+
+      <div class="Textura">
+        <div class="flex-box">
+          <!-- <a class="previous round" onclick="plusBlade(-1)">&#8249;</a>
+            <span id="IDHoja">Hoja de Metal</span>
+                 <a class="next round" onclick="plusBlade(1)">&#8250;</a> -->
+          <div class="Texturas">
+            <div class="hola">Texturas</div>
+            <!-- <a class="previous round" onclick="plusTexturaSable(-1)">&#10094;</a>
+                  <a class="next round" onclick="plusTexturaSable(1)">&#10095;</a> -->
+          </div>
+          <div id="content">
+            <div id="top">
+              <div id="left">
+                <div class="container"> <a class="previous round" onclick="plusTexturaSable(-1)">&#10094;</a> </div>
+              </div>
+              <div id="Center">
+                <div class="container"> <span id="TexturaHoja">Madera</span> </div>
+              </div>
+              <div id="right">
+                <div class="container"> <a class="next round" onclick="plusTexturaSable(1)">&#10095;</a> </div>
+              </div>
+            </div>
+            <div id="bottom">
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+      <div class="three">
+        <h1>Funda de la Katana</h1>
+      </div>
+      <div class="Vaina">
+        <div class="flex-box">
+          <!-- <a class="previous round" onclick="plusBlade(-1)">&#8249;</a>
+            <span id="IDHoja">Hoja de Metal</span>
+                 <a class="next round" onclick="plusBlade(1)">&#8250;</a> -->
+          <div class="Vainas">
+            <div class="hola">Estilo</div>
+            <!-- <a class="previous round" onclick="plusTexturaSable(-1)">&#10094;</a>
+                  <a class="next round" onclick="plusTexturaSable(1)">&#10095;</a> -->
+          </div>
+          <div id="content">
+            <div id="top">
+              <div id="left">
+                <div class="container"> <a class="previous round" onclick="plusVaina(-1)">&#10094;</a> </div>
+              </div>
+              <div id="Center">
+                <div class="container"> <span id="ModeloVaina">Curvado</span> </div>
+              </div>
+              <div id="right">
+                <div class="container">  <a class="next round" onclick="plusVaina(1)">&#10095;</a> </div>
+              </div>
+            </div>
+            <div id="bottom">
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+      <div class="VainaTextura">
+        <div class="flex-box">
+          <!-- <a class="previous round" onclick="plusBlade(-1)">&#8249;</a>
+            <span id="IDHoja">Hoja de Metal</span>
+                 <a class="next round" onclick="plusBlade(1)">&#8250;</a> -->
+          <div class="Vainas">
+            <div class="hola">Texturas</div>
+            <!-- <a class="previous round" onclick="plusTexturaSable(-1)">&#10094;</a>
+                  <a class="next round" onclick="plusTexturaSable(1)">&#10095;</a> -->
+          </div>
+          <div id="content">
+            <div id="top">
+              <div id="left">
+                <div class="container">   <a class="previous round" onclick="plusTexturaVaina(-1)">&#10094;</a> </div>
+              </div>
+              <div id="Center">
+                <div class="container"> <span id="TexturaVaina">Madera sellada</span> </div>
+              </div>
+              <div id="right">
+                <div class="container">   <a class="next round" onclick="plusTexturaVaina(1)">&#10095;</a></div>
+              </div>
+            </div>
+            <div id="bottom">
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+      <div class="three">
+        <h1>Empuñadura</h1>
+      </div>
+      <div class="Empunadura">
+        <div class="flex-box">
+          <!-- <a class="previous round" onclick="plusBlade(-1)">&#8249;</a>
+            <span id="IDHoja">Hoja de Metal</span>
+                 <a class="next round" onclick="plusBlade(1)">&#8250;</a> -->
+          <div class="Vainas">
+            <div class="hola">Empuñadura</div>
+            <!-- <a class="previous round" onclick="plusTexturaSable(-1)">&#10094;</a>
+                  <a class="next round" onclick="plusTexturaSable(1)">&#10095;</a> -->
+          </div>
+          <div id="content">
+            <div id="top">
+              <div id="left">
+                <div class="container">   <a class="previous round" onclick="plusEmpunadura(-1)">&#10094;</a> </div>
+              </div>
+              <div id="Center">
+                <div class="container"> <span id="Empuñadura">Artistica</span> </div>
+              </div>
+              <div id="right">
+                <div class="container">    <a class="next round" onclick="plusEmpunadura(1)">&#10095;</a></div>
+              </div>
+            </div>
+            <div id="bottom">
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+      <div class="three">
+        <h1>Precio</h1>
+      </div>
+      <div class="Precio">
+        <div class="flex-box">
+          <!-- <a class="previous round" onclick="plusBlade(-1)">&#8249;</a>
+            <span id="IDHoja">Hoja de Metal</span>
+                 <a class="next round" onclick="plusBlade(1)">&#8250;</a> -->
+          <div class="Vainas">
+            
+            <!-- <a class="previous round" onclick="plusTexturaSable(-1)">&#10094;</a>
+                  <a class="next round" onclick="plusTexturaSable(1)">&#10095;</a> -->
+          </div>
+          <div id="content">
+            <div id="top">
+              <div id="left">
+                <div class="container">  El Total a pagar:  </div>
+              </div>
+              <div id="Center">
+                <div class="hola"> <span id="PrecioUnitario">RD$2900</span> </div>
+              </div>
+              <div id="right">
+                <div class="container">    </div>
+              </div>
+            </div>
+            <div id="bottom">
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- <div class="vaina">
+        <div>Vaina</div>
+        <a class="previous round" onclick="plusVaina(-1)">&#10094;</a>
+        <a class="next round" onclick="plusVaina(1)">&#10095;</a>
+      </div> -->
+      <!-- <div class="Empunadura">
+        <div>Empunadura</div>
+        <a class="previous round" onclick="plusEmpunadura(-1)">&#10094;</a>
+        <a class="next round" onclick="plusEmpunadura(1)">&#10095;</a>
+      </div> -->
+
+      <!-- <div class="Texturas">
+        <div>Vaina Texturas</div>
+        <a class="previous round" onclick="plusTexturaVaina(-1)">&#10094;</a>
+        <a class="next round" onclick="plusTexturaVaina(1)">&#10095;</a>
+      </div> -->
+
+    </div>
+
   </div>
-  <div class="vaina">
-    <div>Vaina</div>
-    <a class="prev" onclick="plusVaina(-1)">&#10094;</a>
-    <a class="next" onclick="plusVaina(1)">&#10095;</a>
-  </div>
-  <div class="Empunadura">
-    <div>Empunadura</div>
-    <a class="prev" onclick="plusEmpunadura(-1)">&#10094;</a>
-    <a class="next" onclick="plusEmpunadura(1)">&#10095;</a>
-  </div>
-  <div class="Texturas">
-    <div>Sables Texturas</div>
-    <a class="prev" onclick="plusTexturaSable(-1)">&#10094;</a>
-    <a class="next" onclick="plusTexturaSable(1)">&#10095;</a>
-  </div>
-  <div class="Texturas">
-    <div>Vaina Texturas</div>
-    <a class="prev" onclick="plusTexturaVaina(-1)">&#10094;</a>
-    <a class="next" onclick="plusTexturaVaina(1)">&#10095;</a>
-  </div>
+  <!-- <div class="main"style="margin-left:25%">
+      <div class="sable">
+        <div>Sable</div>
+        <a class="prev" onclick="plusBlade(-1)">&#10094;</a>
+        <a class="next" onclick="plusBlade(1)">&#10095;</a>
+      </div>
+      <div class="vaina">
+        <div>Vaina</div>
+        <a class="prev" onclick="plusVaina(-1)">&#10094;</a>
+        <a class="next" onclick="plusVaina(1)">&#10095;</a>
+      </div>
+      <div class="Empunadura">
+        <div>Empunadura</div>
+        <a class="prev" onclick="plusEmpunadura(-1)">&#10094;</a>
+        <a class="next" onclick="plusEmpunadura(1)">&#10095;</a>
+      </div>
+      <div class="Texturas">
+        <div>Sables Texturas</div>
+        <a class="prev" onclick="plusTexturaSable(-1)">&#10094;</a>
+        <a class="next" onclick="plusTexturaSable(1)">&#10095;</a>
+      </div>
+      <div class="Texturas">
+        <div>Vaina Texturas</div>
+        <a class="prev" onclick="plusTexturaVaina(-1)">&#10094;</a>
+        <a class="next" onclick="plusTexturaVaina(1)">&#10095;</a>
+      </div>
+    </div>
+    -->
+
+
+
 
   <!-- Scripts   -->
   <script src="js/three.js"></script>
@@ -58,13 +281,14 @@
     const manos = [];
     const sable = [];
     const baqueta = [];
+    let hola;
 
     const Texts = [];
 
     //Vaina Texturas
     const AllVainas_Texture = [];
 
-    
+
 
     const Vainas_TexturesNormal = [];
     AllVainas_Texture.push(Vainas_TexturesNormal);
@@ -72,6 +296,10 @@
     AllVainas_Texture.push(Vainas_TexturesSakura);
     const Vainas_TexturesBlack = [];
     AllVainas_Texture.push(Vainas_TexturesBlack);
+
+
+
+    
     const renderer = new THREE.WebGLRenderer();
     renderer.setSize(window.innerWidth, window.innerHeight);
     document.body.appendChild(renderer.domElement);
@@ -79,18 +307,16 @@
     renderer.shadowMap.type = THREE.PCFSoftShadowMap;
 
     //Iluminacion
-    const spotLight = new THREE.SpotLight(0xffffff, 40, 146);
+    const spotLight = new THREE.SpotLight(0xffffff, 30, 146);
     scene.add(spotLight);
-    const light = new THREE.AmbientLight(0x404040, 2); // soft white light
+    const light = new THREE.AmbientLight(0x404040, 1); // soft white light
     scene.add(light);
-
 
     spotLight.position.set(0, 100, 100);
     spotLight.castShadow = true;
     scene.add(spotLight);
     const spotLightHelper = new THREE.SpotLightHelper(spotLight);
     scene.add(spotLightHelper);
-
 
     //Suelo de Tatami
     const texture = new THREE.TextureLoader().load("textures/tatami.jpg");
@@ -166,8 +392,12 @@
       normalMap: texturewood,
       clearcoatNormalMap: texturewood,
       clearcoatNormalScale: new THREE.Vector2(options.clearcoatNormalScale),
-      side: THREE.DoubleSide
+      side: THREE.DoubleSide,
+      name: "Madera",
+      //Ponerle el coste a los demas si sobra tiempo
+      costo: 50
     });
+
     Texts.push(TextureMadera);
 
     const texturemetal = new THREE.TextureLoader().load("Materiales/reinforced-metal_normal-dx.png");
@@ -190,9 +420,12 @@
       normalScale: new THREE.Vector2(options.normalScale),
       normalMap: texturemetal,
       clearcoatNormalMap: texturemetal,
-      clearcoatNormalScale: new THREE.Vector2(options.clearcoatNormalScale)
+      clearcoatNormalScale: new THREE.Vector2(options.clearcoatNormalScale),
+      name: "Metal",
+      costo: 100
 
     });
+  
     Texts.push(TextureM);
 
     const CristalTexture = new THREE.MeshPhysicalMaterial({
@@ -206,7 +439,10 @@
       normalScale: new THREE.Vector2(options.normalScale),
       normalMap: normalMapTexture,
       clearcoatNormalMap: normalMapTexture,
-      clearcoatNormalScale: new THREE.Vector2(options.clearcoatNormalScale)
+      clearcoatNormalScale: new THREE.Vector2(options.clearcoatNormalScale),
+      name: "Cristal",
+      costo: 75
+
     });
     Texts.push(CristalTexture);
 
@@ -225,6 +461,8 @@
       transmission: options.transmission,
       thickness: options.thickness,
       roughness: 1,
+      costo: 50,
+      name:"Madera sellada",
 
 
 
@@ -241,7 +479,8 @@
       transmission: options.transmission,
       thickness: options.thickness,
       roughness: 1,
-
+      costo: 45,
+      name:"Sellos antiguos",
 
 
       side: THREE.DoubleSide
@@ -249,10 +488,30 @@
     Vainas_TexturesSakura.push(VainaT2);
 
 
-    //Normal
+
+    const TextureSakura3 = new THREE.TextureLoader().load("textures/texturesSakura/Katana_MAT_BaseColor - copia (2).jpg");
+
+    const VainaT3 = new THREE.MeshPhysicalMaterial({
+      map: TextureSakura3,
+
+      transmission: options.transmission,
+      thickness: options.thickness,
+      roughness: 1,
+      costo:60,
+      name:"Emma",
 
 
-    const TextureNormal1 = new THREE.TextureLoader().load("textures/texturesNormal/Katana_MAT_BaseColor2.jpg");
+
+      side: THREE.DoubleSide
+    });
+    Vainas_TexturesSakura.push(VainaT3);
+
+
+
+    //Black
+
+
+    const TextureNormal1 = new THREE.TextureLoader().load("textures/texturesBlack/Katana_MAT_BaseColor - copia.jpg");
 
 
     TextureNormal1.repeat.set(options.normalRepeat, options.normalRepeat);
@@ -262,15 +521,16 @@
       transmission: options.transmission,
       thickness: options.thickness,
       roughness: 1,
-
+     costo: 50,
+     name:"Madera sellada",
 
 
       side: THREE.DoubleSide
     });
     Vainas_TexturesNormal.push(VainaNormal1);
 
- 
-    const TextureNormal2 = new THREE.TextureLoader().load("textures/texturesNormal/Albedo.png");
+
+    const TextureNormal2 = new THREE.TextureLoader().load("textures/texturesBlack/Albedo - copia (2).png");
 
     const VainaNormal2 = new THREE.MeshPhysicalMaterial({
       map: TextureNormal2,
@@ -278,16 +538,37 @@
       transmission: options.transmission,
       thickness: options.thickness,
       roughness: 1,
-
+      costo: 45,
+      name:"Sellos antiguos",
 
 
       side: THREE.DoubleSide
     });
     Vainas_TexturesNormal.push(VainaNormal2);
 
-    //Black
 
-    const TextureBlack1 = new THREE.TextureLoader().load("textures/texturesNormal/Katana_MAT_BaseColor2.jpg");
+    const TextureNormal3 = new THREE.TextureLoader().load("textures/texturesBlack/Shusui Case_DefaultMaterial_BaseColor.png");
+
+    const VainaNormal3 = new THREE.MeshPhysicalMaterial({
+      map: TextureNormal3,
+
+      transmission: options.transmission,
+      thickness: options.thickness,
+      roughness: 1,
+      costo:60,
+      name:"Emma",
+
+
+      side: THREE.DoubleSide
+    });
+    Vainas_TexturesNormal.push(VainaNormal3);
+
+
+
+
+    //Normal
+
+    const TextureBlack1 = new THREE.TextureLoader().load("textures/texturesNormal/Albedo - copia (2).png");
 
 
     TextureBlack1.repeat.set(options.normalRepeat, options.normalRepeat);
@@ -297,14 +578,14 @@
       transmission: options.transmission,
       thickness: options.thickness,
       roughness: 1,
-
-
+      costo: 50,
+      name:"Madera sellada",
 
       side: THREE.DoubleSide
     });
     Vainas_TexturesBlack.push(VainaBlack1);
 
- 
+
     const TextureBlack2 = new THREE.TextureLoader().load("textures/texturesNormal/Albedo.png");
 
     const VainaBlack2 = new THREE.MeshPhysicalMaterial({
@@ -313,12 +594,31 @@
       transmission: options.transmission,
       thickness: options.thickness,
       roughness: 1,
-
+      costo: 45,
+      name:"Sellos antiguos",
 
 
       side: THREE.DoubleSide
     });
     Vainas_TexturesBlack.push(VainaBlack2);
+
+
+    const TextureBlack3 = new THREE.TextureLoader().load("textures/texturesNormal/ShusuiNormal.png");
+
+    const VainaBlack3 = new THREE.MeshPhysicalMaterial({
+      map: TextureBlack3,
+
+      transmission: options.transmission,
+      thickness: options.thickness,
+      roughness: 1,
+      costo:60,
+      name:"Emma",
+
+
+      side: THREE.DoubleSide
+    });
+    Vainas_TexturesBlack.push(VainaBlack3);
+
 
 
 
@@ -328,37 +628,48 @@
 
     //Stand de modelaje
     const Stand = new THREE.OBJLoader();
-    Stand.load("models/standSmall_LOD0.obj", function (object) {
+    Stand.load("models/Stand.obj", function (object) {
+      const TextureStand = new THREE.TextureLoader().load("textures/Stand_DefaultMaterial_BaseColor.png");
       //     console.log(object.children[0]);
       const estante = object.children[0];
       estante.material = new THREE.MeshPhysicalMaterial({
-        color: "blue",
+        map: TextureStand,
       });
 
-      estante.scale.x = 6;
-      estante.scale.y = 6;
-      estante.scale.z = 6;
-      estante.position.y = -1;
+      estante.scale.x = 0.04;
+      estante.scale.y = 0.04;
+      estante.scale.z = 0.04;
+      estante.position.y = -0.4;
+      estante.rotation.y = Math.PI / -2;
 
       scene.add(estante);
     });
 
+
     //Espada
 
+
     const Blade1 = new THREE.OBJLoader();
-    Blade1.load("models/Katana_export.obj", function (object) {
-      Blade = object.children[0];
+    Blade1.load("models/Normal.obj", function (object) {
+      Blade = object.children[1];
 
       Blade.material = TextureMadera;
 
-      Blade.scale.x = 2;
-      Blade.scale.y = 2;
-      Blade.scale.z = 2;
+      Blade.scale.x = 2.5;
+      Blade.scale.y = 2.6;
+      Blade.scale.z = 2.7;
+      Blade.name = "Hoja Samurai"
 
-      Blade.position.y = 0.1;
+
+      Blade.position.y = 0.275;
+      Blade.position.z = -0.14;
+      Blade.position.x = -0.3;
       Blade.rotation.z = Math.PI / -2;
       Blade.rotation.y = Math.PI;
+      Blade.costo = 50
+     
       sable.push(Blade);
+     
       scene.add(sable[0]);
     });
 
@@ -368,13 +679,17 @@
       const BladeCiber = object.children[0];
 
       BladeCiber.material = TextureMadera;
-      BladeCiber.scale.x = 0.4;
-      BladeCiber.scale.y = 0.4;
+      BladeCiber.scale.x = 0.28;
+      BladeCiber.scale.y = 0.45;
       BladeCiber.scale.z = 0.4;
       BladeCiber.rotation.y = Math.PI / 2;
+      BladeCiber.name = "Hoja Cibernetica"
 
-      BladeCiber.position.y = 0.2;
-      BladeCiber.position.x = 0;
+
+      BladeCiber.position.y = 0.333;
+      BladeCiber.position.x = -0.5;
+      BladeCiber.position.z = -0.14;
+      BladeCiber.costo = 300
       sable.push(BladeCiber);
     });
 
@@ -382,30 +697,41 @@
     const Blade3 = new THREE.OBJLoader();
     Blade3.load("models/Katana4.obj", function (object) {
       const BladeSakura = object.children[0];
-      BladeSakura.material = TextureMadera
+      BladeSakura.material = TextureMadera;
+      BladeSakura.name = "Hoja Sakura"
 
       BladeSakura.scale.x = 2;
-      BladeSakura.scale.y = 2;
+      BladeSakura.scale.y = 2.5;
       BladeSakura.scale.z = 2;
 
-      BladeSakura.position.y = 0.1;
-      BladeSakura.position.x = -0.5;
+      BladeSakura.position.y = 0.235;
+      BladeSakura.position.x = -1.16;
+      BladeSakura.position.z = -0.14;
+      BladeSakura.costo = 200
+
       sable.push(BladeSakura);
     });
 
     // BladeBlack
     const Blade4 = new THREE.OBJLoader();
-    Blade4.load("models/BlackKatana.obj", function (object) {
-      const BladeBlack = object.children[2];
+    Blade4.load("models/Wano.obj", function (object) {
+
+      const BladeBlack = object.children[1];
       BladeBlack.material = TextureMadera
-      BladeBlack.scale.x = 2;
-      BladeBlack.scale.y = 2;
-      BladeBlack.scale.z = 2;
-      BladeBlack.rotation.z = Math.PI / 0.98;
-      BladeBlack.rotation.x = Math.PI / 0.98;
-      BladeBlack.position.y = -0.6;
-      BladeBlack.position.x = -0.4;
-      BladeBlack.position.z = -0.05;
+      BladeBlack.scale.x = 0.045;
+      BladeBlack.scale.y = 0.03;
+      BladeBlack.scale.z = 0.03;
+      BladeBlack.name = "Hoja Oscura"
+
+
+
+      BladeBlack.rotation.z = Math.PI / 2;
+      BladeBlack.rotation.x = Math.PI / 2;
+      BladeBlack.rotation.y = Math.PI / -1.95;
+      BladeBlack.position.y = 0.238;
+      BladeBlack.position.x = -0.32;
+      BladeBlack.position.z = -0.14;
+      BladeBlack.costo = 175
       sable.push(BladeBlack);
     });
 
@@ -413,14 +739,17 @@
     const Vaina1 = new THREE.OBJLoader();
     Vaina1.load("models/Katana_vaina.obj", function (object) {
       const Vaina = object.children[1];
-      Vaina.material = VainaT1;
+      Vaina.material = VainaBlack1;
       Vaina.scale.x = 2;
       Vaina.scale.y = 2;
       Vaina.scale.z = 2;
       Vaina.rotation.z = Math.PI / 1.82;
 
-      Vaina.position.y = -0.37;
+      Vaina.position.y = -0.17;
       Vaina.position.x = -0.2;
+      Vaina.position.z = 0.1;
+      Vaina.costo = 250;
+      Vaina.name = "Samurai"
 
 
       baqueta.push(Vaina);
@@ -430,28 +759,37 @@
     const Vaina2 = new THREE.OBJLoader();
     Vaina2.load("models/Katana.obj", function (object) {
       VainaSakura = object.children[1];
-      VainaSakura.material = new THREE.MeshPhysicalMaterial({ color: "red" });
+      VainaSakura.material = VainaT1;
       VainaSakura.scale.x = 0.02;
       VainaSakura.scale.y = 0.02;
       VainaSakura.scale.z = 0.02;
-
-      VainaSakura.position.y = -0.37;
+      VainaSakura.rotation.x = Math.PI;
+      VainaSakura.position.y = -0.18;
       VainaSakura.position.x = -1;
-
+      VainaSakura.position.z = 0.1;
+      VainaSakura.costo = 500;
+      VainaSakura.name = "Tradicional"
       baqueta.push(VainaSakura);
     });
 
     // Black Vaina
     const Vaina3 = new THREE.OBJLoader();
-    Vaina3.load("models/BlackKatana.obj", function (object) {
+    Vaina3.load("models/Shusui Case.obj", function (object) {
       const BlackVaina = object.children[0];
-      BlackVaina.material = VainaT1;
-      BlackVaina.scale.x = 2;
-      BlackVaina.scale.y = 2;
-      BlackVaina.scale.z = 2;
-      BlackVaina.rotation.z = Math.PI / 0.98;
-      BlackVaina.position.y = 0.02;
-      BlackVaina.position.x = -0.4;
+      BlackVaina.material = VainaNormal1;
+      BlackVaina.scale.x = 0.02;
+      BlackVaina.scale.y = 0.02;
+      BlackVaina.scale.z = 0.02;
+
+      BlackVaina.rotation.z = Math.PI / 2;
+      BlackVaina.rotation.x = Math.PI / 2;
+      BlackVaina.rotation.y = Math.PI / -1.9;
+
+      BlackVaina.position.y = -0.12;
+      BlackVaina.position.x = 0;
+      BlackVaina.position.z = 0.10;
+      BlackVaina.costo = 350;
+      BlackVaina.name = "Curvado"
       scene.add(BlackVaina);
       baqueta.push(BlackVaina);
     });
@@ -460,64 +798,84 @@
 
     // Black Agarre
     const Empunadura1 = new THREE.OBJLoader();
-    Empunadura1.load("models/BlackKatana.obj", function (object) {
-      const BlackEmpunadura = object.children[1];
-      BlackEmpunadura.material = new THREE.MeshPhysicalMaterial({ color: "red" });
-      BlackEmpunadura.scale.x = 2;
-      BlackEmpunadura.scale.y = 2;
-      BlackEmpunadura.scale.z = 2;
-      BlackEmpunadura.rotation.z = Math.PI / 1.02;
-      BlackEmpunadura.position.y = 0.78;
-      BlackEmpunadura.position.x = 0.3;
-      // scene.add(BlackEmpunadura);
+    Empunadura1.load("models/WanoAgarre.obj", function (object) {
+      const BlackEmpunadura = object.children[0];
+      const Texture = new THREE.TextureLoader().load("textures/texturesBlack/Shusui v1_DefaultMaterial_BaseColor.png");
+      BlackEmpunadura.material = new THREE.MeshPhysicalMaterial({ map: Texture });
+      BlackEmpunadura.scale.x = 0.03;
+      BlackEmpunadura.scale.y = 0.03;
+      BlackEmpunadura.scale.z = 0.03;
+      BlackEmpunadura.rotation.y = Math.PI / -2;
+      BlackEmpunadura.position.y = 0.26;
+      BlackEmpunadura.position.x = -0.29;
+      BlackEmpunadura.position.z = -0.14;
+      BlackEmpunadura.costo = 250;
+      BlackEmpunadura.name = "Artistica"
       manos.push(BlackEmpunadura);
+      scene.add(BlackEmpunadura);
     });
 
     //AgarreNormal 
     const Empunadura2 = new THREE.OBJLoader();
     Empunadura2.load("models/Empunadura1.obj", function (object) {
       const Empunadura = object.children[0];
-      Empunadura.material = new THREE.MeshPhysicalMaterial({ color: "red" });
-      Empunadura.scale.x = 2;
-      Empunadura.scale.y = 2;
-      Empunadura.scale.z = 2;
+      Empunadura.material = VainaBlack2;
+      Empunadura.scale.x = 3;
+      Empunadura.scale.y = 3;
+      Empunadura.scale.z = 4;
       Empunadura.rotation.z = Math.PI / 2;
       Empunadura.rotation.x = Math.PI;
-      Empunadura.position.y = 0.12;
-      Empunadura.position.x = 0;
-
+      Empunadura.position.y = 0.29;
+      Empunadura.position.x = -0.15;
+      Empunadura.position.z = -0.14;
+      Empunadura.costo = 100;
+      Empunadura.name = "Tradicional"
       manos.push(Empunadura);
+
     });
 
-    //AgarreCibber
+    //AgarreCiber
     const Empunadura3 = new THREE.OBJLoader();
     Empunadura3.load("models/KatanaForZIPAgarre.obj", function (object) {
       const EmpunaduraCiber = object.children[0];
-      EmpunaduraCiber.material = new THREE.MeshPhysicalMaterial({ color: "red" });
+      EmpunaduraCiber.material = TextureM;
       EmpunaduraCiber.scale.x = 0.4;
       EmpunaduraCiber.scale.y = 0.4;
       EmpunaduraCiber.scale.z = 0.4;
       EmpunaduraCiber.rotation.z = Math.PI;
       EmpunaduraCiber.rotation.x = Math.PI;
       EmpunaduraCiber.rotation.y = Math.PI / 2;
-      EmpunaduraCiber.position.y = 0.18;
-      EmpunaduraCiber.position.x = 0;
+      EmpunaduraCiber.position.y = 0.31;
+      EmpunaduraCiber.position.x = -0.5;
+      EmpunaduraCiber.position.z = -0.14;
+      EmpunaduraCiber.costo = 200;
+      EmpunaduraCiber.name = "Cibernetica"
 
       manos.push(EmpunaduraCiber);
-      scene.add(EmpunaduraCiber);
+
     });
 
+//Variables de las funciones
+let slideIndex = 0;
+let slideAgarre = 0;
+let slideVaina = 0;
+let slideTextura = 0;
+let slideTexturaVaina = 0;
+const precio = 0;
+//Funcion para calcular el precio
 
 
+function CambiarPrecio() {
+  n = 2000;
+  const precio = n + sable[slideIndex].costo +baqueta[slideVaina].costo +manos[slideAgarre].costo + AllVainas_Texture[0][slideTexturaVaina].costo + Texts[slideTextura].costo;
+          document.getElementById("PrecioUnitario").innerHTML = "RD$" + precio;
+      
+    }
 
-
-
-
-
-
+   
     //Funcion de Paso de Espada
 
-    let slideIndex = 0;
+  
     showBlade(slideIndex);
 
     // Next/previous controls
@@ -539,6 +897,9 @@
 
         if (index == slideIndex) {
           scene.add(element);
+         
+          document.getElementById("IDHoja").innerHTML = element.name;
+          CambiarPrecio()
         } else {
           scene.remove(element);
         }
@@ -548,7 +909,7 @@
 
     //Funcion de Paso de Espada
 
-    let slideAgarre = 0;
+   
     showEmpunadura(slideAgarre);
 
     // Next/previous controls
@@ -570,6 +931,9 @@
 
         if (index == slideAgarre) {
           scene.add(element);
+          document.getElementById("Empuñadura").innerHTML = element.name;
+         
+          CambiarPrecio()
         } else {
           scene.remove(element);
         }
@@ -577,7 +941,7 @@
     }
 
     //Funcion paso de vaina
-    let slideVaina = 0;
+   
 
     // Next/previous controls
     function plusVaina(n) {
@@ -598,6 +962,8 @@
 
         if (index == slideVaina) {
           scene.add(element);
+          document.getElementById("ModeloVaina").innerHTML = element.name;
+          CambiarPrecio()
         } else {
           scene.remove(element);
         }
@@ -605,7 +971,7 @@
     }
 
     //Funcion paso de Textura al Sable
-    let slideTextura = 0;
+   
 
     // Next/previous controls
     function plusTexturaSable(n) {
@@ -622,20 +988,23 @@
       for (let index = 0; index < sable.length; index++) {
 
         if (Texts[slideTextura].isMaterial == true) {
-        
+
           sable[index].material = Texts[slideTextura]
+          document.getElementById("TexturaHoja").innerHTML =  Texts[slideTextura].name;
         }
         else {
           sable[index].material = new THREE.MeshPhysicalMaterial({ map: Texts[slideTextura] });
+          document.getElementById("TexturaHoja").innerHTML =  sable[index].name;
         }
 
 
       }
+      CambiarPrecio()
     }
 
 
     //Funcion paso de Textura a la Vaina
-    let slideTexturaVaina = 0;
+   
 
     // Next/previous controls
     function plusTexturaVaina(n) {
@@ -649,36 +1018,33 @@
 
 
 
-    
-        for (let index = 0; index < Vainas_TexturesSakura.length; index++) {
-          console.log("hola")
-          console.log(AllVainas_Texture)
-          for (let index = 0; index < baqueta.length; index++) {
-            if (Vainas_TexturesSakura[slideTexturaVaina].isMaterial == true) {
-              baqueta[index].material = AllVainas_Texture[index][slideTexturaVaina]
-              console.log(AllVainas_Texture[slideVaina][slideTexturaVaina])
-              //Vainas_TexturesSakura[slideTexturaVaina]
-            }
-            else {
-              baqueta[index].material = new THREE.MeshPhysicalMaterial({ map: Vainas_TexturesSakura[slideTexturaVaina] });
-            }
 
+      for (let index = 0; index < Vainas_TexturesSakura.length; index++) {
+
+        for (let index = 0; index < baqueta.length; index++) {
+          if (Vainas_TexturesSakura[slideTexturaVaina].isMaterial == true) {
+            baqueta[index].material = AllVainas_Texture[index][slideTexturaVaina]
+            document.getElementById("TexturaVaina").innerHTML =  AllVainas_Texture[index][slideTexturaVaina].name;
+            //console.log(AllVainas_Texture[slideVaina][slideTexturaVaina])
+            //Vainas_TexturesSakura[slideTexturaVaina]
           }
+          else {
+            baqueta[index].material = new THREE.MeshPhysicalMaterial({ map: Vainas_TexturesSakura[slideTexturaVaina] });
+          }
+
         }
-    
+      }TexturaVaina
+      CambiarPrecio()
 
     }
 
-
-
-
-
     //general configs
 
-    camera.position.z = 5;
+    camera.position.z = 3;
+   
     const control = new THREE.OrbitControls(camera, renderer.domElement);
     control.update();
-
+    control.autoRotate = true
     function animate() {
       requestAnimationFrame(animate);
 

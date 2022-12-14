@@ -5834,6 +5834,7 @@
 
 			this.layers = new Layers();
 			this.visible = true;
+			this.costo = 0;
 			this.castShadow = false;
 			this.receiveShadow = false;
 			this.frustumCulled = true;
@@ -26674,6 +26675,7 @@
 			this.sheenColor = new Color(0x000000);
 			this.sheenColorMap = null;
 			this.sheenRoughness = 1.0;
+			this.costo = 0;
 			this.sheenRoughnessMap = null;
 			this.transmissionMap = null;
 			this.thickness = 0;

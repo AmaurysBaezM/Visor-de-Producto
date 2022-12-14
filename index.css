@@ -1,0 +1,139 @@
+.sidebar {
+    height: 100%;
+    width: 350px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding-top: 10px;
+    background-color: lightblue;
+}
+
+.sidebar div {
+    padding: 1px;
+ 
+    display: block;
+}
+
+.body-text {
+    margin-left: 150px;
+    font-size: 18px;
+}
+
+
+
+.flex-box {
+    display:block;
+    font-size: 15px;
+    
+  }
+
+  
+
+
+ 
+
+a {
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 16px;
+}
+
+a:hover {
+    background-color: #ddd;
+    color: black;
+    cursor: pointer;
+}
+
+.previous {
+    background-color: #f1f1f1;
+    color: black;
+   
+}
+
+.next {
+    background-color: #04AA6D;
+    color: white;
+    position: absolute; 
+    right: 10px;
+  
+}
+
+.round {
+    border-radius: 50%;
+}
+
+#left{
+    float:left;
+    width: 20%;
+}
+#right{
+    float:left;
+    width: 20%;
+    
+}
+
+#Center{
+    float:left;
+    width: 60%;
+    text-align: center;
+    padding-top: 10px;
+}
+#bottom{
+   
+    clear: both;
+}
+
+h1 {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    font-family: "Raleway", sans-serif;
+    font-weight: 300;
+    font-size: 40px;
+    color: #080808;
+    -webkit-transition: all 0.4s ease 0s;
+    -o-transition: all 0.4s ease 0s;
+    transition: all 0.4s ease 0s;
+  }
+
+  h1 span {
+    display: block;
+    font-size: 0.5em;
+    line-height: 1.3;
+  }
+  h1 em {
+    font-style: normal;
+    font-weight: 600;
+  }
+  .three h1 {
+  font-size: 28px;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.5em;
+  padding-bottom: 15px;
+  position: relative;
+}
+.three h1:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 5px;
+  width: 55px;
+  background-color: #111;
+}
+.three h1:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 2px;
+  height: 1px;
+  width: 95%;
+  max-width: 255px;
+  background-color: #333;
+}
+
+.hola{
+    font-weight: 600;
+
+}
