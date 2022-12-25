@@ -9,13 +9,39 @@
       margin: 0;
     }
   </style>
+
+<style>
+  #loader {
+      border: 12px solid #f3f3f3;
+      border-radius: 50%;
+      border-top: 12px solid #444444;
+      width: 70px;
+      height: 70px;
+      animation: spin 1s linear infinite;
+  }
+    
+  @keyframes spin {
+      100% {
+          transform: rotate(360deg);
+      }
+  }
+    
+  .center {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+  }
+</style>
   <link rel="stylesheet" href="index.css" />
 </head>
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
 <body>
-
-  <div class="sidebar">
+  <div id="loader" class="center"></div>
+  <div id= "sidebar"class="sidebar">
     <div class="main">
       <div class="three">
         <h1>Hoja de la Katana</h1>
@@ -229,6 +255,7 @@
     </div>
 
   </div>
+  <div id="scene3d"></canvas>
   <!-- <div class="main"style="margin-left:25%">
       <div class="sable">
         <div>Sable</div>
@@ -269,8 +296,23 @@
 
   <script>
 
-
-    const scene = new THREE.Scene();
+document.onreadystatechange = function() {
+            if (document.readyState !== "complete"  ) {
+                document.querySelector(
+                  "body").style.visibility = "hidden";
+                  
+                document.querySelector(
+                  "#loader").style.visibility = "visible";
+            } else {
+                document.querySelector(
+                  "#loader").style.display = "none";
+                document.querySelector(
+                  "body").style.visibility = "visible";
+            }
+        };
+        var scene3d = document.getElementById("scene3d");
+   
+        const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(
       75,
       window.innerWidth / window.innerHeight,
@@ -302,7 +344,7 @@
     
     const renderer = new THREE.WebGLRenderer();
     renderer.setSize(window.innerWidth, window.innerHeight);
-    document.body.appendChild(renderer.domElement);
+    scene3d.appendChild(renderer.domElement);
     renderer.shadowMap.enabled = true;
     renderer.shadowMap.type = THREE.PCFSoftShadowMap;
 
@@ -315,8 +357,8 @@
     spotLight.position.set(0, 100, 100);
     spotLight.castShadow = true;
     scene.add(spotLight);
-    const spotLightHelper = new THREE.SpotLightHelper(spotLight);
-    scene.add(spotLightHelper);
+    // const spotLightHelper = new THREE.SpotLightHelper(spotLight);
+    // scene.add(spotLightHelper);
 
     //Suelo de Tatami
     const texture = new THREE.TextureLoader().load("textures/tatami.jpg");
@@ -394,7 +436,7 @@
       clearcoatNormalScale: new THREE.Vector2(options.clearcoatNormalScale),
       side: THREE.DoubleSide,
       name: "Madera",
-      //Ponerle el coste a los demas si sobra tiempo
+      
       costo: 50
     });
 
@@ -1038,9 +1080,21 @@ function CambiarPrecio() {
 
     }
 
+    window.addEventListener( 'resize', onWindowResize, false );
+
+function onWindowResize(){
+
+    camera.aspect = window.innerWidth / window.innerHeight;
+    camera.updateProjectionMatrix();
+
+    renderer.setSize( window.innerWidth, window.innerHeight );
+
+}    
+
     //general configs
 
     camera.position.z = 3;
+    camera.position.x = -2;
    
     const control = new THREE.OrbitControls(camera, renderer.domElement);
     control.update();
@@ -1049,8 +1103,9 @@ function CambiarPrecio() {
       requestAnimationFrame(animate);
 
       control.update();
-
+      onWindowResize()
       renderer.render(scene, camera);
+
     }
 
     animate();
