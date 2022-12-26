@@ -5,7 +5,7 @@
 
 
 ## 📝 Descripción
-- ***Visor de Producto *** realizado como Proyecto Final del curso **Computacion Grafica II**.
+- ***Visor de Producto*** realizado como Proyecto Final del curso **omputacion Grafica II**.
 
 - Se trata de una **Single Page Application (SPA)** realizada utilizando tecnologías Frontend como ser **HTML, CSS, Bootstrap** junto a librerias como**Threejs y  OBJLoader** .
 
